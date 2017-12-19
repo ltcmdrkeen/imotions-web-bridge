@@ -1,0 +1,6 @@
+<EventSource Id="EventSourceId" Version="1" Name="EventSourceName">
+      <Sample Id="SampleId" Name="SampleName">
+          <Field Id="GraphLabel1" Range="Fixed" Min="0" Max="100"></Field>
+          <Field Id="GraphLabel2" Range="Fixed" Min="0" Max="20"></Field>
+      </Sample>
+</EventSource>
