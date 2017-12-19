@@ -30,8 +30,16 @@ iMotions currently has no possibility to directly connect to it's event API from
     // Do the same as in the iMotions tutorial
     for(var i=0;i<100;i++){
       setTimeout(function(ws,i){
+				// Send a test event:
         iMotionsEvent="E;1;EventSourceId;1;0.0;;;SampleId;" + i + ";" + i/10 + "\r\n"
         ws.send(iMotionsEvent);
+				// Send a test marker:
+				if(i % 2 == 0){
+					iMotionsMarker = "M;1;;;CheckOut;Respondent completed the check out task\r\n";
+				}else{
+					iMotionsMarker = "M;1;;;CheckIn;Respondent started check in task\r\n";
+				}
+
       },i*500,connection,i);
     }
 
